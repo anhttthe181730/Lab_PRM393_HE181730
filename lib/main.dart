@@ -87,22 +87,40 @@ import 'package:flutter/material.dart';
 
 // LAB 4 - EXERCISE 4, 5
 //import 'package:lab_he181730/lab/4/exercise4.dart';
-import 'package:lab_he181730/lab/4/exercise5.dart';
+// import 'package:lab_he181730/lab/4/exercise5.dart';
+
+// void main() {
+//   runApp(MyApp());
+// }
+
+// class MyApp extends StatelessWidget {
+//   MyApp({super.key});
+//   Center bodyApp() => Center(child: Text("First App"));
+//   @override
+//   Widget build(BuildContext context) {
+//     // TODO: implement build
+//     // return MaterialApp(
+//     //   debugShowCheckedModeBanner: false,
+//     //   home: AppStructureDemo(),
+//     // );
+//     return MaterialApp(debugShowCheckedModeBanner: false, home: Exercise5());
+//   }
+// }
+
+import 'package:flutter/material.dart';
+import 'package:lab_he181730/ui/pages/LocationListPage.dart';
+import 'package:lab_he181730/data/LocationData.dart';
 
 void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  MyApp({super.key});
-  Center bodyApp() => Center(child: Text("First App"));
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    // return MaterialApp(
-    //   debugShowCheckedModeBanner: false,
-    //   home: AppStructureDemo(),
-    // );
-    return MaterialApp(debugShowCheckedModeBanner: false, home: Exercise5());
+    return MaterialApp(
+      home: LocationListPage(locations: locationsData),
+      debugShowCheckedModeBanner: false,
+    );
   }
 }
