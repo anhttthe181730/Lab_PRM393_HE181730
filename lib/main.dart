@@ -107,20 +107,21 @@ import 'package:flutter/material.dart';
 //   }
 // }
 
-import 'package:flutter/material.dart';
-import 'package:lab_he181730/ui/pages/LocationListPage.dart';
-import 'package:lab_he181730/data/LocationData.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:lab_he181730/ui/pages/ProductManagePage.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: LocationListPage(locations: locationsData),
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
+      home: ProductManagePage(),
     );
   }
 }
