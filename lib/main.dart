@@ -107,21 +107,38 @@ import 'package:flutter/material.dart';
 //   }
 // }
 
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:lab_he181730/ui/pages/MultiplePageWidget.dart';
+//bai tap tren lop slot 11
+// import 'package:flutter_riverpod/flutter_riverpod.dart';
+// import 'package:lab_he181730/ui/pages/MultiplePageWidget.dart';
+
+// void main() {
+//   runApp(const ProviderScope(child: MyApp()));
+// }
+
+// class MyApp extends StatelessWidget {
+//   const MyApp({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       debugShowCheckedModeBanner: false,
+//       home: NavigationExample(),
+//     );
+//   }
+// }
+
+// Lab 5
+import 'package:lab_he181730/lab/5/ui/pages/HomeScreen.dart';
 
 void main() {
-  runApp(const ProviderScope(child: MyApp()));
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
+  MyApp({super.key});
+  Center bodyApp() => Center(child: Text("Movies App"));
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: NavigationExample(),
-    );
+    return MaterialApp(debugShowCheckedModeBanner: false, home: HomeScreen());
   }
 }
