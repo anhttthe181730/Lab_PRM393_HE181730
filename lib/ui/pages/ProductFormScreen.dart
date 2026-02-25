@@ -53,6 +53,7 @@ class _ProductFormScreenState extends ConsumerState<ProductFormScreen> {
         description: _descController.text,
         imageUrl: widget.product?.imageUrl ?? "assets/images/conMeo.jpg",
         isFavorite: widget.product?.isFavorite ?? false,
+        categoryId: widget.product?.categoryId ?? "cat1",
       );
 
       final viewModel = ref.read(productListViewModelProvider.notifier);

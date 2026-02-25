@@ -4,6 +4,7 @@ import 'package:lab_he181730/models/Product.dart';
 import 'package:lab_he181730/services/GlobalStateService.dart';
 import 'package:lab_he181730/services/ProductListViewModel.dart';
 import 'ProductFormScreen.dart';
+import 'package:lab_he181730/widgets/CustomerWidget.dart';
 
 class ProductManagePage extends ConsumerWidget {
   const ProductManagePage({super.key});
@@ -14,7 +15,7 @@ class ProductManagePage extends ConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(
-        leading: const Icon(Icons.menu),
+        leading: Category2Menu(),
         title: const Center(child: Text("Product List")),
         actions: [
           TextButton(

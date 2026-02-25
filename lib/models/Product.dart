@@ -5,6 +5,7 @@ class Product {
   final String description;
   final String imageUrl;
   bool isFavorite;
+  final String categoryId;
 
   Product({
     required this.id,
@@ -13,6 +14,7 @@ class Product {
     required this.description,
     required this.imageUrl,
     required this.isFavorite,
+    required this.categoryId,
   });
 
   Product copyWith({
@@ -22,6 +24,7 @@ class Product {
     String? description,
     String? imageUrl,
     bool? isFavorite,
+    String? categoryId,
   }) => Product(
     id: id ?? this.id,
     name: name ?? this.name,
@@ -29,11 +32,13 @@ class Product {
     description: description ?? this.description,
     imageUrl: imageUrl ?? this.imageUrl,
     isFavorite: isFavorite ?? this.isFavorite,
+    categoryId: categoryId ?? this.categoryId,
   );
   static List<Product> getList() {
     return [
       Product(
         id: "01",
+        categoryId: "cat1",
         name: "Product 1",
         description: "Đây là con mèo đáng yêu",
         imageUrl: "assets/images/conMeo.jpg",
@@ -42,6 +47,7 @@ class Product {
       ),
       Product(
         id: "02",
+        categoryId: "cat2",
         name: "Product 2",
         description: "Đây là con hải cẩu",
         imageUrl: "assets/images/haicau.jpg",
@@ -50,6 +56,7 @@ class Product {
       ),
       Product(
         id: "03",
+        categoryId: "cat1",
         name: "Product 3",
         description: "Mèo con dễ thương",
         imageUrl: "assets/images/conMeo.jpg",
@@ -58,6 +65,7 @@ class Product {
       ),
       Product(
         id: "04",
+        categoryId: "cat2",
         name: "Product 4",
         description: "Hải cẩu béo tròn",
         imageUrl: "assets/images/haicau.jpg",
