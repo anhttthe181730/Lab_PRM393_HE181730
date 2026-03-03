@@ -3,40 +3,35 @@ import 'package:flutter/material.dart';
 class CategoryProduct {
   final String caId;
   final String caName;
-  final IconData icon;
-
+  final Icon icon;
   CategoryProduct({
-    required this.caId, 
-    required this.caName, 
-    required this.icon});
+    required this.caId,
+    required this.icon,
+    required this.caName,
+  });
 
-    static List<CategoryProduct> getCategories() {
-      return [
-        CategoryProduct(
-          caId: "cat1",
-          caName: "Category 1",
-          icon: Icons.category,
-        ),
-        CategoryProduct(
-          caId: "cat2",
-          caName: "Category 2",
-          icon: Icons.category,
-        ),
-        CategoryProduct(
-            caId: "cat3",
-            caName: "Category 3",
-            icon: Icons.category,
-        ),
-        CategoryProduct(
-            caId: "cat4",
-            caName: "Category 4",
-            icon: Icons.category,
-        ),
-        CategoryProduct(
-            caId: "cat5",
-            caName: "Category 5",
-            icon: Icons.category,
-        ),
-      ];
-    }
+  static List<CategoryProduct> getCategories() {
+    return [
+      CategoryProduct(
+        caId: "ca01",
+        icon: Icon(Icons.home),
+        caName: "Category 1",
+      ),
+      CategoryProduct(
+        caId: "ca02",
+        icon: Icon(Icons.home),
+        caName: "Category 2",
+      ),
+      CategoryProduct(
+        caId: "ca03",
+        icon: Icon(Icons.home),
+        caName: "Category 3",
+      ),
+      CategoryProduct(
+        caId: "ca04",
+        icon: Icon(Icons.home),
+        caName: "Category 4",
+      ),
+    ];
+  }
 }

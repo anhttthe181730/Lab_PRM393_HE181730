@@ -1,75 +1,87 @@
 class Product {
   final String id;
+  final String caId; // Thêm trường ID danh mục
   final String name;
-  final double price;
+  final int price;
   final String description;
   final String imageUrl;
   bool isFavorite;
-  final String categoryId;
 
   Product({
     required this.id,
+    required this.caId, // Thêm vào constructor
     required this.name,
-    required this.price,
-    required this.description,
-    required this.imageUrl,
-    required this.isFavorite,
-    required this.categoryId,
+    this.price = 0,
+    this.description = "",
+    this.imageUrl = "",
+    this.isFavorite = true,
   });
 
   Product copyWith({
     String? id,
+    String? caId, // Thêm vào copyWith
     String? name,
-    double? price,
+    int? price,
     String? description,
     String? imageUrl,
     bool? isFavorite,
-    String? categoryId,
-  }) => Product(
-    id: id ?? this.id,
-    name: name ?? this.name,
-    price: price ?? this.price,
-    description: description ?? this.description,
-    imageUrl: imageUrl ?? this.imageUrl,
-    isFavorite: isFavorite ?? this.isFavorite,
-    categoryId: categoryId ?? this.categoryId,
-  );
+  }) {
+    return Product(
+      id: id ?? this.id,
+      caId: caId ?? this.caId, // Gán giá trị mới hoặc giữ nguyên giá trị cũ
+      name: name ?? this.name,
+      price: price ?? this.price,
+      description: description ?? this.description,
+      imageUrl: imageUrl ?? this.imageUrl,
+      isFavorite: isFavorite ?? this.isFavorite,
+    );
+  }
+
   static List<Product> getList() {
     return [
       Product(
         id: "01",
-        categoryId: "cat1",
+        caId: "ca01", // Ví dụ gán cho Category 1
         name: "Product 1",
-        description: "Đây là con mèo đáng yêu",
+        description: "Mô tả sản phẩm 1",
         imageUrl: "assets/images/conMeo.jpg",
         price: 100,
         isFavorite: true,
       ),
       Product(
         id: "02",
-        categoryId: "cat2",
+        caId: "ca01",
         name: "Product 2",
-        description: "Đây là con hải cẩu",
+        description: "Mô tả sản phẩm 2",
         imageUrl: "assets/images/haicau.jpg",
-        price: 200,
+        price: 100,
         isFavorite: false,
       ),
       Product(
         id: "03",
-        categoryId: "cat1",
+        caId: "ca02", // Ví dụ gán cho Category 2
         name: "Product 3",
-        description: "Mèo con dễ thương",
+        description: "Mô tả sản phẩm 3",
         imageUrl: "assets/images/conMeo.jpg",
-        price: 150,
+        price: 100,
         isFavorite: true,
       ),
       Product(
         id: "04",
-        categoryId: "cat2",
+        caId: "ca03", // Ví dụ gán cho Category 3
         name: "Product 4",
-        description: "Hải cẩu béo tròn",
+        description: "Mô tả sản phẩm 4",
         imageUrl: "assets/images/haicau.jpg",
-        price: 300,
+        price: 100,
+        isFavorite: true,
+      ),
+      Product(
+        id: "05",
+        caId: "ca04", // Ví dụ gán cho Category 4
+        name: "Product 5",
+        description: "Mô tả sản phẩm 5",
+        imageUrl: "assets/images/conMeo.jpg",
+        price: 100,
         isFavorite: false,
       ),
     ];

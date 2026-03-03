@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:lab_he181730/ui/pages/HomePage2.dart';
-import '../pages/About.dart';
-import '../pages/ProductManagePage.dart';
-import '../../widgets/CustomerWidget.dart';
-import '../../services/GlobalStateService.dart';
+import 'package:lab_he181730/ui/pages/About.dart';
+import 'package:lab_he181730/ui/pages/ProductManagePage.dart';
+import 'package:lab_he181730/widgets/CustomerWidget.dart';
+import 'package:lab_he181730/services/GlobalStateService.dart';
 
 class NavigationExample extends ConsumerWidget {
-  const NavigationExample({super.key});
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final ThemeData theme = Theme.of(context);
@@ -44,8 +42,8 @@ class NavigationExample extends ConsumerWidget {
       body: <Widget>[
         /// Home page
         ProductList(),
+        Hom,
         AboutBody(),
-        HomePage(),
 
         /// Notifications page
 

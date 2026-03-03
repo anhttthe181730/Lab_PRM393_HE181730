@@ -16,9 +16,7 @@ class ProductListViewModel extends _$ProductListViewModel {
     if (_caId == null || _caId!.isEmpty) {
       return allProducts;
     } else {
-      return allProducts
-          .where((element) => element.categoryId == _caId)
-          .toList();
+      return allProducts.where((element) => element.caId == _caId).toList();
     }
   }
 

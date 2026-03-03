@@ -108,37 +108,37 @@ import 'package:flutter/material.dart';
 // }
 
 //bai tap tren lop slot 11
-// import 'package:flutter_riverpod/flutter_riverpod.dart';
-// import 'package:lab_he181730/ui/pages/MultiplePageWidget.dart';
-
-// void main() {
-//   runApp(const ProviderScope(child: MyApp()));
-// }
-
-// class MyApp extends StatelessWidget {
-//   const MyApp({super.key});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       debugShowCheckedModeBanner: false,
-//       home: NavigationExample(),
-//     );
-//   }
-// }
-
-// Lab 5
-import 'package:lab_he181730/lab/5/ui/pages/HomeScreen.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:lab_he181730/widgets/MultiplePageWidget.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
-  MyApp({super.key});
-  Center bodyApp() => Center(child: Text("Movies App"));
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false, home: HomeScreen());
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: NavigationExample(),
+    );
   }
 }
+
+// Lab 5
+// import 'package:lab_he181730/lab/5/ui/pages/HomeScreen.dart';
+
+// void main() {
+//   runApp(MyApp());
+// }
+
+// class MyApp extends StatelessWidget {
+//   MyApp({super.key});
+//   Center bodyApp() => Center(child: Text("Movies App"));
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(debugShowCheckedModeBanner: false, home: HomeScreen());
+//   }
+//}
